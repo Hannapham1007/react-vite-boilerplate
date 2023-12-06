@@ -31,10 +31,19 @@ body {
   transition: background 0.3s ease;
 
 }
+
+.input-box,
+.search-box {
+  background: var(--white);
+  color: var(--text-color);
+}
+
+/* CSS for darkmode*/
 body.dark-mode {
   background: var(--dark-background);
   color: var(--dark-text-color);
 }
+
 body.dark-mode .balance-container,
 body.dark-mode .nav-container,
 body.dark-mode .list-container,
