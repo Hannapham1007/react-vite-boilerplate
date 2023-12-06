@@ -37,13 +37,13 @@ body.dark-mode {
 }
 body.dark-mode .balance-container,
 body.dark-mode .nav-container,
-body.dark-mode .search-box,
 body.dark-mode .list-container,
 body.dark-mode .edit-form
 {
   background: var(--dark-box-background); 
 }
-body.dark-mode .input-box
+body.dark-mode .input-box,
+body.dark-mode .search-box
 {
   background: var(--dark-box-background); 
   color: var(--white);
