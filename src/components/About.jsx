@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Question = styled.h3`
+export const Question = styled.h2`
   color: var(--primary);
 `;
 

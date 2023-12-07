@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Date = styled.p`
-font-size: 14px;
 text-align: center;
 `
 export const SearchContainer = styled.div`

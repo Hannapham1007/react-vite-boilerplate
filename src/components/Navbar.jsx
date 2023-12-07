@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
       <div>
       <NavLink to="/about">About</NavLink>
-      <button  style={{background:'none', border:'none', marginLeft:'12px',padding:'0'}}onClick={toggleDarkMode}>
+      <button  style={{background:'none', border:'none', marginLeft:'24px',padding:'0px'}}onClick={toggleDarkMode}>
         {darkMode ? <FaSun style={{color:'var(--white)'}}/> : <FaMoon style={{color:'var(--white)', background:'var(--primary)'}} />}
       </button>
       </div>

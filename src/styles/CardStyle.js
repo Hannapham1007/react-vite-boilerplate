@@ -14,15 +14,15 @@ margin:0;
 `
 export const Content = styled.p`
 margin:0;
-width: 35%;
+width: 30%;
 text-align:right;
 `
 export const CreateDate = styled.p`
 margin:0;
-width:15%;
+width:20%;
 `
 export const EditIcon = styled.div`
-width: 10%;
+width: 20%;
 margin:0;
 text-align:right;
 

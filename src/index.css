@@ -15,11 +15,9 @@
   --white: #ffffff;
   --background-light:#f8f8f8;
   --primary-light-bg: rgba(33, 79, 241, 0.05);
-  --dark-background: #000000;
-  --dark-box-background: #1f1f1f;
-  --dark-container-background: #111111;
-  --dark-text-color: #ffffff;
-  --dark-primary: #4a90e2;
+  --dark-background: #191c22;
+  --dark-box-background: #23272f;
+  --dark-container-background: #16181d;
 }
 
 body {
@@ -30,36 +28,6 @@ body {
   width: 100%;
   transition: background 0.3s ease;
 
-}
-
-.input-box,
-.search-box {
-  background: var(--white);
-  color: var(--text-color);
-}
-
-/* CSS for darkmode*/
-body.dark-mode {
-  background: var(--dark-background);
-  color: var(--dark-text-color);
-}
-
-body.dark-mode .balance-container,
-body.dark-mode .nav-container,
-body.dark-mode .list-container,
-body.dark-mode .edit-form
-{
-  background: var(--dark-box-background); 
-}
-body.dark-mode .input-box,
-body.dark-mode .search-box
-{
-  background: var(--dark-box-background); 
-  color: var(--white);
-}
-body.dark-mode .home-container,
-body.dark-mode .about{
-  background: var(--dark-container-background);
 }
 
 h1{
@@ -75,8 +43,40 @@ h3{
   font-weight: bold;
 }
 p{
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
+}
+
+.input-box,
+.search-box {
+  background: var(--white);
+  color: var(--text-color);
+}
+
+/* CSS for darkmode*/
+body.dark-mode {
+  background: var(--dark-background);
+  color: var(--white);
+}
+/* Dark background for Home, About page*/
+body.dark-mode .home-container,
+body.dark-mode .about{
+  background: var(--dark-container-background);
+}
+/* Dark background for box inside the page */
+body.dark-mode .balance-container,
+body.dark-mode .nav-container,
+body.dark-mode .list-container,
+body.dark-mode .edit-form
+{
+  background: var(--dark-box-background); 
+}
+/* Dark background for input at the Inputform, Edit Components och search bar at the Home page and*/
+body.dark-mode .input-box,
+body.dark-mode .search-box
+{
+  background: var(--dark-box-background); 
+  color: var(--white);
 }
 button{
   cursor: pointer;
@@ -87,20 +87,6 @@ button{
   background:var(--primary-light-bg);
   padding: 20px 100px;
   height: 100vh;
-}
-.balance-container{
-  background: white;
-  border-radius: 4px;
-  padding: 20px 20px;
-}
-.balance-top-haft{
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.add-container{
-  padding-top: 20px;
-  text-align: center;
 }
 .about{
   margin: auto;
