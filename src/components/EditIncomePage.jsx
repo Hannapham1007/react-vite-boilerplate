@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { income } from "../reducers/income";
 import { useNavigate } from "react-router-dom";
-
 import {
   InputContainer,
   Input,
@@ -21,8 +20,6 @@ const EditIncomePage = ({ onSave, onCancel }) => {
   const dispatch = useDispatch();
   const data = useSelector((store) => store.income.incomeData);
   const selectedIncome = data.find((item) => item.id === id);
-  console.log(selectedIncome);
-
   const [type, setType] = useState(selectedIncome ? selectedIncome.type : "");
   const [category, setCategory] = useState(
     selectedIncome ? selectedIncome.category : ""
@@ -31,9 +28,7 @@ const EditIncomePage = ({ onSave, onCancel }) => {
     selectedIncome ? String(selectedIncome.amount) : ""
   );
   const [note, setNote] = useState(selectedIncome ? selectedIncome.note : "");
-
   const navigateTo = useNavigate();
-
   useEffect(() => {
     if (selectedIncome) {
       setType(selectedIncome.type);
@@ -42,9 +37,7 @@ const EditIncomePage = ({ onSave, onCancel }) => {
       setNote(selectedIncome.note);
     }
   }, [selectedIncome]);
-  console.log(selectedIncome);
   const MAX_NOTE_LENGTH = 40;
-
   const handleNoteChange = (value) => {
     if (value.length > MAX_NOTE_LENGTH) {
       alert("Your note is too long 😞, the maximum length is 40 characters.");
@@ -52,7 +45,6 @@ const EditIncomePage = ({ onSave, onCancel }) => {
     }
     setNote(value);
   };
-
   const handleSave = () => {
     if (!amount || parseFloat(amount) <= 0 || !category) {
       alert(
@@ -60,7 +52,6 @@ const EditIncomePage = ({ onSave, onCancel }) => {
       );
       return;
     }
-
     const editedIncome = {
       id: selectedIncome.id,
       type,
@@ -72,7 +63,6 @@ const EditIncomePage = ({ onSave, onCancel }) => {
     dispatch(income.actions.editIncome(editedIncome));
     navigateTo("/");
   };
-
   const handleDelete = () => {
     dispatch(income.actions.deleteIncome(selectedIncome.id));
     navigateTo("/");

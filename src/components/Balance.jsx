@@ -14,7 +14,6 @@ import {
 const Balance = () => {
   const incomeData = useSelector((store) => store.income.incomeData);
   const expenseData = useSelector((store) => store.expense.expenseData);
-
   //Calculate the sum of income and expense
   const totalIncome = incomeData.reduce(
     (total, income) => total + income.amount,
@@ -24,7 +23,6 @@ const Balance = () => {
     (total, expense) => total + expense.amount,
     0
   );
-
   //Calculate the balance
   const balance = totalIncome - totalExpense;
 

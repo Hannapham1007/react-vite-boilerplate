@@ -17,9 +17,7 @@ const InputForm = ({ onSave, onCancel, initialData }) => {
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
-
   const MAX_NOTE_LENGTH = 40;
-
   useEffect(() => {
     if (initialData) {
       setType(initialData.type);
@@ -33,7 +31,6 @@ const InputForm = ({ onSave, onCancel, initialData }) => {
       setNote("");
     }
   }, [initialData]);
-
   const handleNoteChange = (value) => {
     if (value.length > MAX_NOTE_LENGTH) {
       alert("Your note is too long 😞, the maximum length is 40 characters.");
@@ -41,7 +38,6 @@ const InputForm = ({ onSave, onCancel, initialData }) => {
     }
     setNote(value);
   };
-
   const handleSave = () => {
     if (!amount || parseFloat(amount) <= 0 || !type || !category) {
       alert(
@@ -49,29 +45,24 @@ const InputForm = ({ onSave, onCancel, initialData }) => {
       );
       return;
     }
-
     const transaction = {
       category,
       amount: parseFloat(amount),
       note,
     };
-
     if (type === "income") {
       dispatch(income.actions.addIncome(transaction));
     } else if (type === "expense") {
       dispatch(expense.actions.addExpense(transaction));
     }
-
     // Clear the form
     setType("");
     setCategory("");
     setAmount("");
     setNote("");
-
     // Call the onSave callback
     onSave(transaction);
   };
-
   const handleTypeChange = (selectedType) => {
     setType(selectedType);
     setCategory("");

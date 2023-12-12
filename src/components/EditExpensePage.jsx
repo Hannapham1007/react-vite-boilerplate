@@ -21,8 +21,6 @@ const EditExpensePage = ({ onSave, onCancel }) => {
   const dispatch = useDispatch();
   const data = useSelector((store) => store.expense.expenseData);
   const selectedExpense = data.find((item) => item.id === id);
-  console.log(selectedExpense);
-
   const [type, setType] = useState(selectedExpense ? selectedExpense.type : "");
   const [category, setCategory] = useState(
     selectedExpense ? selectedExpense.category : ""
@@ -31,9 +29,7 @@ const EditExpensePage = ({ onSave, onCancel }) => {
     selectedExpense ? String(selectedExpense.amount) : ""
   );
   const [note, setNote] = useState(selectedExpense ? selectedExpense.note : "");
-
   const navigateTo = useNavigate();
-
   useEffect(() => {
     if (selectedExpense) {
       setType(selectedExpense.type);
@@ -42,9 +38,7 @@ const EditExpensePage = ({ onSave, onCancel }) => {
       setNote(selectedExpense.note);
     }
   }, [selectedExpense]);
-  console.log(selectedExpense);
   const MAX_NOTE_LENGTH = 40;
-
   const handleNoteChange = (value) => {
     if (value.length > MAX_NOTE_LENGTH) {
       alert("Your note is too long 😞, the maximum length is 40 characters.");
@@ -52,7 +46,6 @@ const EditExpensePage = ({ onSave, onCancel }) => {
     }
     setNote(value);
   };
-
   const handleSave = () => {
     if (!amount || parseFloat(amount) <= 0 || !category) {
       alert(
@@ -60,7 +53,6 @@ const EditExpensePage = ({ onSave, onCancel }) => {
       );
       return;
     }
-
     const editedExpense = {
       id: selectedExpense.id,
       type,
@@ -72,7 +64,6 @@ const EditExpensePage = ({ onSave, onCancel }) => {
     dispatch(expense.actions.editExpense(editedExpense));
     navigateTo("/");
   };
-
   const handleDelete = () => {
     dispatch(expense.actions.deleteExpense(selectedExpense.id));
     navigateTo("/");

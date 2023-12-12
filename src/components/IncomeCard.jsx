@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaEllipsisV } from "react-icons/fa";
 import {
   CardContainer,
   Content,
@@ -6,8 +8,6 @@ import {
   CreateDate,
   EditIcon,
 } from "../styles/CardStyle";
-import { Link } from "react-router-dom";
-import { FaEllipsisV } from "react-icons/fa";
 
 // Component shows each income log
 const IncomeCard = ({ income }) => {

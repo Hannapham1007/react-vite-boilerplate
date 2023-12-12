@@ -9,12 +9,10 @@ const AddTransaction = () => {
   const handleCancel = () => {
     setFormVisibility(false);
   };
-
   //Function to handle showing the input form
   const handleShowForm = () => {
     setFormVisibility(true);
   };
-
   const handleSave = (transaction) => {
     console.log(transaction);
     setFormVisibility(false);

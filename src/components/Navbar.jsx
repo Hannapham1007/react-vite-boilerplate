@@ -7,14 +7,12 @@ const Navbar = () => {
   // Load dark mode preference from local storage
   const savedDarkMode = localStorage.getItem("darkMode");
   const [darkMode, setDarkMode] = useState(savedDarkMode === "true" || false);
-
   // Toggle dark mode and update local storage
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
     localStorage.setItem("darkMode", String(newDarkMode));
   };
-
   // Apply dark mode class to body on mount and when dark mode changes
   useEffect(() => {
     document.body.classList.toggle("dark-mode", darkMode);
