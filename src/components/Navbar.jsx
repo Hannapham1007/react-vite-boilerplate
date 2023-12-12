@@ -36,11 +36,17 @@ const Navbar = () => {
             onClick={toggleDarkMode}
           >
             {darkMode ? (
+              <>
+              <span style={{ color: "var(--white)", marginRight:'4px', fontWeight:'bold', fontSize:'16px' }}>Light</span>
               <FaSun style={{ color: "var(--white)" }} />
+              </>
             ) : (
+              <>
+              <span style={{ color: "var(--white)", marginRight:'4px', fontWeight:'bold', fontSize:'16px' }}>Dark</span>
               <FaMoon
                 style={{ color: "var(--white)", background: "var(--primary)" }}
               />
+              </>
             )}
           </button>
         </div>
