@@ -25,13 +25,13 @@ const Navbar = () => {
           <NavLink to="/">Expenso</NavLink>
         </div>
         <div>
-          <NavLink to="/about">About</NavLink>
           <button
             style={{
               background: "none",
               border: "none",
-              marginLeft: "24px",
               padding: "0px",
+              display: "flex",
+              alignItems: "center",
             }}
             onClick={toggleDarkMode}
           >
@@ -43,6 +43,9 @@ const Navbar = () => {
               />
             )}
           </button>
+        </div>
+        <div>
+          <NavLink to="/about">About</NavLink>
         </div>
       </div>
     </nav>
