@@ -1,8 +1,7 @@
-import React, {useState, useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import { FaMoon, FaSun } from "react-icons/fa";
-
 
 const Navbar = () => {
   // Load dark mode preference from local storage
@@ -25,16 +24,28 @@ const Navbar = () => {
     <nav className="nav-container">
       <div className="nav">
         <div>
-      <NavLink to="/">Expenso</NavLink>
-      </div>
-      <div>
-      <NavLink to="/about">About</NavLink>
-      <button  style={{background:'none', border:'none', marginLeft:'24px',padding:'0px'}}onClick={toggleDarkMode}>
-        {darkMode ? <FaSun style={{color:'var(--white)'}}/> : <FaMoon style={{color:'var(--white)', background:'var(--primary)'}} />}
-      </button>
-      </div>
-    
-      
+          <NavLink to="/">Expenso</NavLink>
+        </div>
+        <div>
+          <NavLink to="/about">About</NavLink>
+          <button
+            style={{
+              background: "none",
+              border: "none",
+              marginLeft: "24px",
+              padding: "0px",
+            }}
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? (
+              <FaSun style={{ color: "var(--white)" }} />
+            ) : (
+              <FaMoon
+                style={{ color: "var(--white)", background: "var(--primary)" }}
+              />
+            )}
+          </button>
+        </div>
       </div>
     </nav>
   );

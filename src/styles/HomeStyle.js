@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Date = styled.p`
-text-align: center;
-`
+  text-align: center;
+`;
 export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
@@ -10,7 +10,6 @@ export const SearchContainer = styled.div`
   background: var(--white);
   margin-bottom: 12px;
 `;
-
 export const SearchInput = styled.input`
   flex: 1;
   padding: 8px;

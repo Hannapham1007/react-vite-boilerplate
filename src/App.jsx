@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import LoadingPage from "./components/LoadingPage"; 
+import LoadingPage from "./components/LoadingPage";
 import EditIncomePage from "./components/EditIncomePage";
 import EditExpensePage from "./components/EditExpensePage";
 
@@ -33,7 +33,7 @@ function App() {
     <BrowserRouter>
       <Provider store={store}>
         {loading ? (
-          <LoadingPage /> 
+          <LoadingPage />
         ) : (
           <>
             <Navbar />

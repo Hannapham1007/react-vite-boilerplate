@@ -21,7 +21,7 @@ const IncomeCard = ({ income }) => {
           <Link
             to={`/editincome/${income.id}`}
             style={{
-              fontSize:'14px',
+              fontSize: "14px",
               color: "var(--color-text)",
               border: "1px solid lightgrey",
               borderRadius: "4px",

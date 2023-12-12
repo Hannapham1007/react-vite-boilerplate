@@ -4,16 +4,14 @@ import styled from "styled-components";
 export const Question = styled.h2`
   color: var(--primary);
 `;
-
 const About = () => {
-  //TO DO
   return (
     <section className="about">
       <Question>What is this project about?</Question>
       <p>
         This is the final project of Technigo's React and JavaScript 11-week
-        fall '23. I wanted to develop a daily expense tracker web
-        application that combines many aspects I learned during the course.
+        fall '23. I wanted to develop a daily expense tracker web application
+        that combines many aspects I learned during the course.
       </p>
       <Question>How does the app work?</Question>
       <p>
@@ -36,9 +34,9 @@ const About = () => {
       </div>
       <p>
         Users can also edit existing transaction to make corrections or updates.
-        They can also delete transactions that are no longer relevant.
-        After each transaction, the application calculates and updates the
-        user's balance.
+        They can also delete transactions that are no longer relevant. After
+        each transaction, the application calculates and updates the user's
+        balance.
       </p>
       <Question>Which technologies is used?</Question>
       <p>

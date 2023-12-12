@@ -13,7 +13,7 @@
   --secondary: #ff4f49;
   --text-color: #383a42;
   --white: #ffffff;
-  --background-light:#f8f8f8;
+  --background-light: #f8f8f8;
   --primary-light-bg: rgba(33, 79, 241, 0.05);
   --dark-background: #191c22;
   --dark-box-background: #23272f;
@@ -27,22 +27,21 @@ body {
   background: var(--white);
   width: 100%;
   transition: background 0.3s ease;
-
 }
 
-h1{
+h1 {
   font-size: 32px;
   font-weight: bold;
 }
-h2{
+h2 {
   font-size: 24px;
   font-weight: bold;
 }
-h3{
+h3 {
   font-size: 18px;
   font-weight: bold;
 }
-p{
+p {
   font-size: 18px;
   font-weight: normal;
 }
@@ -60,43 +59,40 @@ body.dark-mode {
 }
 /* Dark background for Home, About page*/
 body.dark-mode .home-container,
-body.dark-mode .about{
+body.dark-mode .about {
   background: var(--dark-container-background);
 }
 /* Dark background for box inside the page */
 body.dark-mode .balance-container,
 body.dark-mode .nav-container,
 body.dark-mode .list-container,
-body.dark-mode .edit-form
-{
-  background: var(--dark-box-background); 
+body.dark-mode .edit-form {
+  background: var(--dark-box-background);
 }
 /* Dark background for input at the Inputform, Edit Components och search bar at the Home page and*/
 body.dark-mode .input-box,
-body.dark-mode .search-box
-{
-  background: var(--dark-box-background); 
+body.dark-mode .search-box {
+  background: var(--dark-box-background);
   color: var(--white);
 }
-button{
+button {
   cursor: pointer;
 }
-.home-container{
+.home-container {
   margin: auto;
   width: 50%;
-  background:var(--primary-light-bg);
+  background: var(--primary-light-bg);
   padding: 20px 100px;
   height: 100vh;
 }
-.about{
+.about {
   margin: auto;
   width: 50%;
   padding: 20px 20px;
-  background:var(--primary-light-bg);
+  background: var(--primary-light-bg);
   height: 100vh;
-
 }
-.edit-container{
+.edit-container {
   margin: auto;
   width: 50%;
 }
@@ -106,11 +102,11 @@ button{
     width: 80%;
     padding: 20px 20px;
   }
-  .about{
+  .about {
     width: 80%;
     padding: 20px 20px;
   }
-  .edit-container{
+  .edit-container {
     width: 80%;
     padding: 20px 20px;
   }
@@ -122,13 +118,12 @@ button{
     width: 90%;
     padding: 10px 10px;
   }
-  .about{
+  .about {
     width: 100%;
     padding: 10px 10px;
   }
-  .edit-container{
+  .edit-container {
     width: 100%;
     padding: 10px 10px;
   }
 }
-

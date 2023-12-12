@@ -13,14 +13,18 @@ const Home = () => {
   return (
     <section className="home-container">
       <Date>{date}</Date>
-      <SearchContainer  className="search-box">
-        <SearchInput className="search-box"
+      <SearchContainer className="search-box">
+        <SearchInput
+          className="search-box"
           type="text"
           placeholder="Search transaction category..."
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
-        <FaSearch className="search-box-icon"style={{ marginRight: "8px", color: "var(--primary)" }} />
+        <FaSearch
+          className="search-box-icon"
+          style={{ marginRight: "8px", color: "var(--primary)" }}
+        />
       </SearchContainer>
       <Balance />
       <IncomeList searchInput={searchInput} />
