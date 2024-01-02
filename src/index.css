@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text-color);
-  background: var(--white);
+  background: var(--background-light);
   width: 100%;
   transition: background 0.3s ease;
 }
@@ -38,6 +38,10 @@ h2 {
   font-weight: bold;
 }
 h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h4 {
   font-size: 18px;
   font-weight: bold;
 }
@@ -57,10 +61,21 @@ body.dark-mode {
   background: var(--dark-background);
   color: var(--white);
 }
+/* Dark background for navbar*/
+body.dark-mode a{
+  color: var(--white);
+}
+body.dark-mode a:hover{
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.1);
+}
+body.dark-mode a.active{
+  color: var(--primary);
+}
 /* Dark background for Home, About page*/
-body.dark-mode .home-container,
-body.dark-mode .about {
-  background: var(--dark-container-background);
+body.dark-mode .home-container {
+  background: var(--dark-background);
 }
 /* Dark background for box inside the page */
 body.dark-mode .balance-container,
@@ -81,15 +96,14 @@ button {
 .home-container {
   margin: auto;
   width: 50%;
-  background: var(--primary-light-bg);
+  background: var(--background-light);
   padding: 20px 100px;
   height: 100vh;
 }
 .about {
   margin: auto;
   width: 50%;
-  padding: 20px 20px;
-  background: var(--primary-light-bg);
+  padding: 50px 20px;
   height: 100vh;
 }
 .edit-container {

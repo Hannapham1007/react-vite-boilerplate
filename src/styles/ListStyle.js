@@ -5,12 +5,12 @@ export const ListContainer = styled.div`
   border-radius: 4px;
   padding: 10px 0;
 `;
-export const H3Income = styled.h4`
+export const H3Income = styled.h3`
   padding: 10px 10px 0 10px;
   margin: 0;
   color: var(--primary);
 `;
-export const H3Expense = styled.h4`
+export const H3Expense = styled.h3`
   padding: 10px 10px 0 10px;
   margin: 0;
   color: var(--secondary);

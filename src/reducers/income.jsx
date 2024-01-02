@@ -15,11 +15,27 @@ const saveStateToLocalStorage = (key, state) => {
     console.error("Error saving to local storage:", e);
   }
 };
-
 export const income = createSlice({
   name: "income",
   initialState: {
-    incomeData: loadStateFromLocalStorage("income") || [],
+    incomeData: loadStateFromLocalStorage("income") || [
+      {
+        id: uuidv4(),
+        type: "income",
+        category: "Salary",
+        amount: 25000,
+        note: "Monthly salary",
+        createdAt: moment("2023-12-22").format("MMM DD"),
+      },
+      {
+        id: uuidv4(),
+        type: "income",
+        category: "Freelance",
+        amount: 1000,
+        note: "Freelance project",
+        createdAt: moment("2023-12-15").format("MMM DD"),
+      },
+    ],
   },
   reducers: {
     addIncome: (state, action) => {
@@ -35,7 +51,6 @@ export const income = createSlice({
       state.incomeData = [newIncome, ...state.incomeData];
       saveStateToLocalStorage("income", state.incomeData);
     },
-
     editIncome: (state, action) => {
       const { id, type, category, amount, note } = action.payload;
       state.incomeData = state.incomeData.map((item) =>

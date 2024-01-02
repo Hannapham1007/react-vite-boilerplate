@@ -17,7 +17,7 @@ const Expense = ({ expense }) => {
       <CardContainer>
         <CreateDate>{expense.createdAt}</CreateDate>
         <Content>{expense.category}</Content>
-        <Content>{expense.amount}</Content>
+        <Content>{expense.amount} kr</Content>
         <EditIcon>
           <Link
             to={`/editexpense/${expense.id}`}

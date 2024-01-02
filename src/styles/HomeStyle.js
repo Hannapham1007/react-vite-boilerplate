@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Date = styled.p`
   text-align: center;
+  color: var(--primary);
+  font-size: 16px;
 `;
 export const SearchContainer = styled.div`
   display: flex;
@@ -16,4 +18,5 @@ export const SearchInput = styled.input`
   border: none;
   outline: none;
   font-size: 16px;
+  border-radius: 4px;
 `;

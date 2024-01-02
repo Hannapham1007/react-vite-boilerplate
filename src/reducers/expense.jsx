@@ -18,7 +18,24 @@ const saveStateToLocalStorage = (key, state) => {
 export const expense = createSlice({
   name: "expense",
   initialState: {
-    expenseData: loadStateFromLocalStorage("expense") || [],
+    expenseData: loadStateFromLocalStorage("expense") || [
+      {
+        id: uuidv4(),
+        type: "expense",
+        category: "Food",
+        amount: 3500,
+        note: "Monthly grocery",
+        createdAt: moment("2023-12-10").format("MMM DD"),
+      },
+      {
+        id: uuidv4(),
+        type: "expense",
+        category: "Health",
+        amount: 449,
+        note: "Gym card",
+        createdAt: moment("2023-12-20").format("MMM DD"),
+      },
+    ],
   },
   reducers: {
     addExpense: (state, action) => {

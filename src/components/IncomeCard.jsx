@@ -16,7 +16,7 @@ const IncomeCard = ({ income }) => {
       <CardContainer>
         <CreateDate>{income.createdAt}</CreateDate>
         <Content>{income.category}</Content>
-        <Content>{income.amount}</Content>
+        <Content>{income.amount} kr</Content>
         <EditIcon>
           <Link
             to={`/editincome/${income.id}`}
