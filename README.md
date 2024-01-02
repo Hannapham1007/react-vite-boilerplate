@@ -9,9 +9,9 @@ For each transaction, users can log the following details:
 * Amount: Entering the transaction amount.
 * Note: Adding optional notes for the transaction.
 
-Users can also edit existing transaction to make corrections or updates. They can also delete transactions that are no longer relevant. After each transaction, the application calculates and updates the user's balance.
+Users can also edit existing transactions to make corrections or updates. They can also delete transactions that are no longer relevant. After each transaction, the application calculates and updates the user's balance.
 
-# Technologies Used
+# Technologies used
 
    * React
    * Redux
@@ -28,9 +28,9 @@ Users can also edit existing transaction to make corrections or updates. They ca
 5. Run the project on your local server:
    npm run dev
 
-# Ideas For Future Implements
+# Ideas for future implementations
 * Improve UX by adding feedback when users submit an entry
-* Possiblity to select a currency
+* Possibility to select a currency
 * Possibility to filter expenses by month
 * Possibility to create an account 
 
